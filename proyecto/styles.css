@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+:root {
+    --color-principal:#0b4d87;
+    --color-secundario:#bec0c2;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-secundario);
+}
+
+#pages {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 500px;
+    margin-top: 10px;
+}
+
+main {
+    text-align: center;
+    background-color: var(--color-principal);
+}
+
+footer {
+    background-color: var(--color-secundario);
+}
+
+#presentacion {
+    height: 500px;
+}
+
+#complejo {
+    height: 250px;
+}
+
+#nosotros {
+    height: 200px;
+}
+
+#carrusel {
+    height: 300px;
+}
+
+#preguntas {
+    height: 300px;
+}
+
+#contacto {
+    height: 200px;
+}
