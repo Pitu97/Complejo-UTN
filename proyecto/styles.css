@@ -6,7 +6,7 @@
 
 :root {
     --color-principal:#0b4d87;
-    --color-secundario:#bec0c2;
+    --color-secundario:#dbe7ff;
 }
 
 #navbar {
@@ -15,12 +15,47 @@
     background-color: var(--color-secundario);
 }
 
+#logo_navbar {
+   width: 180px;
+   height: auto;
+   padding: 5px 15px;
+}
+
 #pages {
     display: flex;
     justify-content: space-between;
     list-style: none;
-    width: 500px;
-    margin-top: 10px;
+    width: 550px;
+    margin: 20px 0;
+}
+
+#pages li {
+    padding: 5px 15px;
+    border-radius: 15%;
+    font-size: 17px;
+}
+
+#pages li:hover {
+    background-color: #c5d0e6;
+}
+
+#mode-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 210px;
+}
+
+#mode {
+    width: 20px;
+    margin: 15px 0;
+    padding: 5px;
+    border-radius: 10px;
+    border-style: solid;
+}
+
+#mode:hover {
+    background-color: #c5d0e6;
 }
 
 main {
