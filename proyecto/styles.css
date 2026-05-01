@@ -176,3 +176,15 @@ footer {
     z-index: 2; 
     width: 450px;    
 }
+
+#disenocomplejo {
+    width: 100%;        
+    max-width: 700px;  
+    margin: 0 auto;    
+}
+
+#img-diseno {
+    width: 100%;       
+    height: auto;       
+    display: block;     
+}
