@@ -95,7 +95,21 @@ footer {
 }
 
 #preguntas {
-    height: 300px;
+    height: auto;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.pregunta {
+    margin: 30px;
+    padding: 20px;
+    background-color: var(--color-secundario);
+    border-radius: 10px;
+}
+
+.resp {
+    display: block;
+    padding-top: 20px;
 }
 
 #contacto {
