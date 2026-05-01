@@ -76,7 +76,9 @@ footer {
 }
 
 #nosotros {
-    height: 200px;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
 }
 
 #carrusel {
@@ -89,4 +91,21 @@ footer {
 
 #contacto {
     height: 200px;
+    
+}
+#texto_nosotros{
+    display: grid;
+    width: 50%;
+    background-color: #7cbbcf;
+    border-radius: 10px;
+    padding: 15px;
+    border-style: solid;
+
+}
+#fotocancha{
+    height: auto;
+    width: 450px;
+    border-radius: 10px;
+    border-style: solid;
+
 }
