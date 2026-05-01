@@ -4,6 +4,17 @@
     
 }
 
+@font-face {
+    font-family: MiFuente;
+    src: url(/proyecto/assets/fonts/ZenDots-Regular.ttf) format('woff');
+    font-weight: normal;
+    font-size: normal;
+}
+
+body {
+    font-family: 'MiFuente', sans-serif;
+}
+
 :root {
     --color-principal:#0b4d87;
     --color-secundario:#dbe7ff;
