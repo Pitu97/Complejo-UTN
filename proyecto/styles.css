@@ -83,11 +83,6 @@ footer {
     height: 250px;
 }
 
-#nosotros {
-    height: auto;
-    display: flex;
-    justify-content: space-around;
-}
 
 #carrusel {
     height: 300px;
@@ -101,21 +96,41 @@ footer {
     height: 200px;
     
 }
+
+#nosotros {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+}
+
 #texto_nosotros{
     display: grid;
     width: 50%;
-    background-color: #7cbbcf;
+    background-color: var(--color-secundario);
     border-radius: 10px;
-    padding: 15px;
+    padding: 40px;
+    border-color: #333;
+    border-width: 2px;
     border-style: solid;
+    line-height: 1.5;
 
 }
+
+#texto_nosotros p {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #333;            
+}
+
 #fotocancha{
     height: auto;
-    width: 450px;
+    width: 650px;
+    border-width: 2px;
+    border-color: #333;
     border-radius: 10px;
     border-style: solid;
-
 }
 
 #presentacion {
