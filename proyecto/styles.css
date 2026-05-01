@@ -71,7 +71,8 @@ body {
 
 main {
     text-align: center;
-    background-color: var(--color-principal);
+    background-image: url(/proyecto/assets/imagenes/background.png);
+    background-size: cover;
 }
 
 footer {
