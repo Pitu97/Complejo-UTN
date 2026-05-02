@@ -115,8 +115,12 @@ footer {
 }
 
 .resp {
-    display: block;
+    display: none;
     padding-top: 20px;
+}
+
+.activo .resp {
+    display: block;
 }
 
 #contacto {
