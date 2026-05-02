@@ -268,3 +268,37 @@ footer {
     color: var(--color-secundario);
     transform: scale(1.7);
 }
+
+#footer{
+    background-color: var(--color-secundario);
+    color: black;
+    padding: 50px 10% 20px 10%;
+}
+
+#cont_footer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 80px;
+    margin: 0 auto;
+    max-width: 1500px;
+}
+
+.col_footer{
+    flex: 1;
+    min-width: 200px;
+}
+
+#img_footer{
+    max-width: 300px;
+    height: auto;
+}
+
+.col_footer h3{
+    color: var(--color-principal);
+    letter-spacing: 2px;
+}
+
+.col_footer p:hover{
+    color: var(--color-principal);
+}
