@@ -18,6 +18,7 @@ body {
 :root {
     --color-principal:#0b4d87;
     --color-secundario:#dbe7ff;
+    --color-fuente: black;
 }
 
 #navbar {
@@ -26,10 +27,15 @@ body {
     background-color: var(--color-secundario);
 }
 
+#navbar a{
+        color: var(--color-fuente);
+        text-decoration: none;
+}
+
 #logo_navbar {
-   width: 180px;
-   height: auto;
-   padding: 5px 15px;
+    width: 180px;
+    height: auto;
+    padding: 5px 15px;
 }
 
 #pages {
