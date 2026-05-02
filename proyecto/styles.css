@@ -92,7 +92,13 @@ footer {
 
 
 #carrusel {
-    height: 300px;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+#carrusel img{
+    border-radius: 5px;
 }
 
 #preguntas {
@@ -120,7 +126,6 @@ footer {
 
 #nosotros {
     height: auto;
-    width: 100%;
     display: flex;
     justify-content: space-around;
     padding: 50px 20px;
