@@ -108,8 +108,35 @@ footer {
 }
 
 #contacto {
-    height: 200px;
-    
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 50px;
+}
+
+#ubi_texto {
+    height: auto;
+    width: 45%;
+    text-align: left;
+    padding: 10px 25px;
+    font-size: 25px;
+    background-color: var(--color-secundario);
+    border-radius: 10px;
+    border: solid;
+}
+
+#ubi_texto p {
+    padding: 20px;
+}
+
+#ubi_texto div {
+    display: flex;
+    justify-content: left;
+    margin: 0 auto;
+}
+
+#mapa {
+    padding: 0 20px;
 }
 
 #nosotros {
