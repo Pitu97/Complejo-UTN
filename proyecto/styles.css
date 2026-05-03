@@ -111,6 +111,26 @@ footer {
     border-radius: 5px;
 }
 
+.btn-carrusel{
+    background-color: var(--color-secundario);
+    font-size: 40px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 50%;
+    border: solid 2px black;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+}
+
+.btn-carrusel:hover {
+    opacity: 0.7;
+}
+
 #preguntas {
     height: auto;
     width: 75%;
@@ -125,6 +145,7 @@ footer {
     border-radius: 10px;
     border-style: solid;
     border-color: var(--color-principal);
+    cursor: pointer;
 }
 
 .preg {
