@@ -7,7 +7,7 @@ const visibles = 3;
 let actual = 0;
 
 function moverCarrusel() {
-    const desplazamiento = actual * 600;
+    const desplazamiento = actual * 620;
     imagenes.style.transform = `translateX(-${desplazamiento}px)`;
 }
 
