@@ -30,9 +30,6 @@ botonAnterior.addEventListener("click", () => {
 });
 
 
-
-
-
 const preguntas = document.querySelectorAll(".pregunta");
 
 preguntas.forEach((pregunta) => {
