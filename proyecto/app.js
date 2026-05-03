@@ -37,8 +37,15 @@ const preguntas = document.querySelectorAll(".pregunta");
 
 preguntas.forEach((pregunta) => {
     const item = pregunta.querySelector(".preg");
+    const resp = pregunta.querySelector(".resp");
 
     item.addEventListener("click", () => {
         pregunta.classList.toggle("activo");
+
+        if(pregunta.classList.contains("activo")) {
+            resp.style.maxHeight = resp.scrollHeight + "px";
+        } else {
+            resp.style.maxHeight = 0;
+        }
     });
 });

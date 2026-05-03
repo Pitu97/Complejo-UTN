@@ -69,6 +69,7 @@ body {
     padding: 5px;
     border-radius: 10px;
     border-style: solid;
+    border-color: var(--color-principal);
 }
 
 #mode:hover {
@@ -114,6 +115,7 @@ footer {
     height: auto;
     width: 75%;
     margin: 0 auto;
+    font-size: 25px;
 }
 
 .pregunta {
@@ -121,15 +123,33 @@ footer {
     padding: 20px;
     background-color: var(--color-secundario);
     border-radius: 10px;
+    border-style: solid;
+    border-color: var(--color-principal);
+}
+
+.preg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flecha {
+    width: 35px;
+    transition: transform 0.3s ease;
+}
+
+.activo .flecha {
+    transform: rotate(180deg);
 }
 
 .resp {
-    display: none;
-    padding-top: 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
 }
 
 .activo .resp {
-    display: block;
+    padding-top: 20px;
 }
 
 #contacto {
@@ -148,6 +168,7 @@ footer {
     background-color: var(--color-secundario);
     border-radius: 10px;
     border: solid;
+    border-color: var(--color-principal);
 }
 
 #ubi_texto p {
@@ -177,17 +198,15 @@ footer {
     background-color: var(--color-secundario);
     border-radius: 10px;
     padding: 40px;
-    border-color: #333;
-    border-width: 2px;
+    border-color: var(--color-principal);
     border-style: solid;
     line-height: 1.5;
-
 }
 
 #texto_nosotros p {
     margin-bottom: 20px;
     font-size: 1.2rem;
-    color: #333;            
+    color: var(--color-fuente);           
 }
 
 #fotocancha{
@@ -268,15 +287,17 @@ footer {
     z-index: 1;
     bottom: 125%; 
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%, 10px) scale(0.9);
     white-space: nowrap;
     opacity: 0;
+    transition: all 0.25s ease;
 }
 
 
 .punto:hover .texto-punto {
     visibility: visible;
     opacity: 1;
+    transform: translate(-50%, 0) scale(1);
 }
 
 #titulo-imgcomplejo{
