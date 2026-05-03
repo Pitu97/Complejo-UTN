@@ -1,0 +1,46 @@
+.canchas {
+    font-size: 25px;
+    padding: 20px;
+    color: var(--color-secundario);
+}
+
+.carr {
+    width: 1820px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.track {
+    display: flex;
+    gap: 10px;
+    transition: transform 1s ease-in-out;
+}
+
+.track img {
+    height: 400px;
+    width: 600px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#btn-reserva {
+    padding: 50px;
+    
+}
+
+#btn-reserva a {
+    text-decoration: none;
+}
+
+#btn-reserva h2 {
+    margin: 0 auto;
+    width: 500px;
+    padding: 20px;
+    background-color: var(--color-secundario);
+    border-radius: 15px;
+    color: var(--color-fuente);
+}
+
+#btn-reserva h2:hover {
+    background-color: #c5d0e6;
+}
