@@ -1,0 +1,56 @@
+#reg-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 6.8% 0;
+}
+
+#reg-container h2 {
+    color: var(--color-principal);
+    font-size: 35px;
+    padding: 15px;
+}
+
+.formulario {
+    background-color: var(--color-secundario);
+    border-radius: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 25px;
+    height: 320px;
+    align-items: center;
+}
+
+.form input {
+    width: 300px;
+    height: 25px;
+    border-radius: 10px; 
+    padding: 5px 15px;
+    font-family: 'MiFuente', sans-serif;
+    margin: 5px;
+}
+
+.form button {
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+    transition: all 0.3s ease;
+    font-family: 'MiFuente', sans-serif;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.form button:hover {
+    background-color: var(--color-secundario);
+    color: var(--color-principal);
+}
+
+#divisor {
+    width: 2px;
+    height: auto;
+    background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.5), transparent);
+}

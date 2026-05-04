@@ -45,18 +45,20 @@ body {
     display: flex;
     justify-content: space-between;
     list-style: none;
-    width: 550px;
+    width: 650px;
     margin: 20px 0;
 }
 
 #pages li {
     padding: 5px 15px;
-    border-radius: 15%;
+    border-radius: 10px;
     font-size: 17px;
+    transition: all 0.3s ease;
 }
 
 #pages li:hover {
-    background-color: #c5d0e6;
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
 }
 
 #mode-container {
@@ -73,6 +75,7 @@ body {
     border-radius: 10px;
     border-style: solid;
     border-color: var(--color-principal);
+    transition: background-color 0.3s ease;
 }
 
 #mode:hover {
