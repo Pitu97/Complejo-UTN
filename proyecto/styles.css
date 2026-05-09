@@ -373,3 +373,11 @@ footer {
 .col_footer p:hover{
     color: var(--color-principal);
 }
+body.dark-mode{
+    --color-principal: #4da3ff;
+    --color-secundario: #0b4d87;
+    --color-fuente: black;
+}
+.dark-mode main{
+    background-image: url(./assets/imagenes/background_darkmode.png);
+}
