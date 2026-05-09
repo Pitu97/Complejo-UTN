@@ -40,4 +40,10 @@ window.addEventListener("load", () => {
     });
 });
 
+const mode = document.getElementById("mode");
+
+mode.addEventListener("click", function () {
+    document.body.classList.toggle("dark-mode");
+});
+
 
