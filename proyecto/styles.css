@@ -368,3 +368,17 @@ footer {
 .col_footer p:hover{
     color: var(--color-principal);
 }
+@media (max-width:1400px){
+    #fotocancha{
+        width:80%;
+    }
+    #texto_nosotros{
+        width:80% ;
+    }
+    #texto_nosotros p{
+        font-size:70%;
+    }
+    #preguntas{
+        font-size:85%;
+    }
+}
