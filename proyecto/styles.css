@@ -21,6 +21,11 @@ body {
     --color-fuente: black;
 }
 
+
+html{
+    scroll-behavior: smooth;
+}
+
 #navbar {
     display: flex;
     justify-content: space-between;
