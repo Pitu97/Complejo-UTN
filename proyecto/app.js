@@ -47,11 +47,26 @@ preguntas.forEach((pregunta) => {
     });
 });
 
-const mode = document.getElementById("mode");
+const mode = document.getElementById("mode"); 
 
 mode.addEventListener("click", function () {
     document.body.classList.toggle("dark-mode");
+
+    
+    if(document.body.classList.contains("dark-mode")){
+        localStorage.setItem("modo", "dark-mode");
+    }
+    else{
+        localStorage.setItem("modo", "light-mode");
+    }
 });
+
+if(localStorage.getItem("modo") === "dark-mode"){
+    document.body.classList.toggle("dark-mode")
+}
+else{
+    document.body.classList.remove("dark-mode");
+}
 
 
 
