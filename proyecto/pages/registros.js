@@ -1,6 +1,7 @@
-const registro = document.querySelector("#sign-up form");
+const regContainer = document.querySelector("#sing-up");
+const logContainer = document.querySelector("#login");
 
-let id = 0;
+const registro = document.querySelector("#sign-up form");
 
 registro.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -21,8 +22,7 @@ registro.addEventListener("submit", (e) => {
     alert("Usuario registrado");
 
     const registrado = JSON.stringify(usuario);
-    localStorage.setItem(`usuario${id}`, registrado);
-    id++;
+    localStorage.setItem("usuario", registrado);
 });
 
 const login = document.querySelector("#login form");
@@ -31,12 +31,10 @@ login.addEventListener("submit", (e) => {
     e.preventDefault();
     const correo = login.querySelector("#correo").value;
     const pass = login.querySelector("#contraseña").value;
+    const logueado = JSON.parse(localStorage.getItem("usuario"));
 
-    for (let i = 0; i < localStorage.length; i++) {
-        const logueado = JSON.parse(localStorage.getItem(`usuario${i}`));
-        if (correo === logueado.mail && pass === logueado.contraseña) {
+    if (correo === logueado.mail && pass === logueado.contraseña) {
             alert("Usuario Encontrado");
             console.log(logueado);
-        }    
-    }
+        }
 });
