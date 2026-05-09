@@ -381,4 +381,30 @@ footer {
     #preguntas{
         font-size:85%;
     }
+    
+    #mapa{
+        width: 90%;
+        margin-left: 50px;
+    }
+    #mapa iframe {
+    
+        width: 90%;
+    }
+    #ubi_texto{
+        font-size:95% ;
+        margin-left: 50px;
+    }
+    #cont_footer {
+        gap: 50px;
+
+    }
+    .col_footer {
+        width: 90px;
+        font-size: 80%;
+        gap:50px;
+    }
+    #img_footer{
+        max-width: 200px;
+    }
+
 }
