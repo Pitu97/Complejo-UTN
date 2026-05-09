@@ -5,11 +5,22 @@ const total = imagenes.children.length;
 const visibles = 3; 
 
 let actual = 0;
+function moverCarrusel() {
+    // Obtenemos el ancho actual de la primera imagen
+    const anchoImagen = imagenes.children[0].clientWidth;
+    const gap = 20; // El gap que definiste en el CSS
 
+    // Calculamos el desplazamiento dinámicamente
+    const desplazamiento = actual * (anchoImagen + gap);
+
+    imagenes.style.transform = `translateX(-${desplazamiento}px)`;
+}
+/*
 function moverCarrusel() {
     const desplazamiento = actual * 620;
     imagenes.style.transform = `translateX(-${desplazamiento}px)`;
 }
+ */
 
 botonSiguiente.addEventListener("click", () => {
     if (actual < total - visibles) {

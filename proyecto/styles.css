@@ -98,7 +98,9 @@ footer {
 }
 
 #carrusel {
-    width: 1860px;
+    width: 100%;
+    max-width: 1185px;
+    position: relative;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -112,7 +114,8 @@ footer {
 }
 
 #img-carrusel img {
-    width: 600px;
+    width: calc(33.33% - 20px);
+    object-fit: cover;
     flex-shrink: 0;
     border-radius: 5px;
 }
@@ -371,9 +374,11 @@ footer {
 @media (max-width:1400px){
     #fotocancha{
         width:80%;
+        margin-right: 50px ;
     }
     #texto_nosotros{
-        width:80% ;
+        width:90% ;
+        margin-right: 50px;
     }
     #texto_nosotros p{
         font-size:70%;
