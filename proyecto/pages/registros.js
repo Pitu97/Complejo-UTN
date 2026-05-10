@@ -1,5 +1,23 @@
-const regContainer = document.querySelector("#sing-up");
-const logContainer = document.querySelector("#login");
+const regContainer = document.getElementById("sign-up");
+const logContainer = document.getElementById("login");
+const userContainer = document.getElementById("user_page");
+
+const usuario = JSON.parse(localStorage.getItem("usuario"));
+const logueado = localStorage.getItem("logueado");
+
+if (!usuario) {
+    regContainer.style.display = "block";
+    logContainer.style.display = "none";
+    userContainer.style.display = "none";
+} else if (usuario && !logueado) {
+    regContainer.style.display = "none";
+    logContainer.style.display = "block";
+    userContainer.style.display = "none";
+} else {
+    regContainer.style.display = "none";
+    logContainer.style.display = "none";
+    userContainer.style.display = "block";
+}
 
 const registro = document.querySelector("#sign-up form");
 
@@ -23,6 +41,7 @@ registro.addEventListener("submit", (e) => {
 
     const registrado = JSON.stringify(usuario);
     localStorage.setItem("usuario", registrado);
+    location.reload();
 });
 
 const login = document.querySelector("#login form");
@@ -31,13 +50,47 @@ login.addEventListener("submit", (e) => {
     e.preventDefault();
     const correo = login.querySelector("#correo").value;
     const pass = login.querySelector("#contraseña").value;
-    const logueado = JSON.parse(localStorage.getItem("usuario"));
+    const logueadoUser = JSON.parse(localStorage.getItem("usuario"));
 
-    if (correo === logueado.mail && pass === logueado.contraseña) {
-            alert("Usuario Encontrado");
-            console.log(logueado);
-        }
+    if (correo === logueadoUser.mail && pass === logueadoUser.contraseña) {
+        alert("Usuario Encontrado");
+        localStorage.setItem("logueado", "true");
+        location.reload();
+    } else {
+        alert("Usuario no encontrado");
+    }
 });
+
+const nom_u = document.querySelector("#nombre-u");
+const corr_u = document.querySelector("#correo-u");
+const tel_u = document.querySelector("#telefono-u");
+
+if(usuario && logueado) {
+    nom_u.textContent = usuario.nombre + " " + usuario.apellido;
+    corr_u.innerHTML = `<strong>Correo:</strong> ${usuario.mail}`;
+    tel_u.innerHTML = `<strong>Telefono:</strong> ${usuario.telefono}`
+}
+
+const reserva = document.querySelector("#res");
+reserva.addEventListener("click", () => {
+    window.location.href = "reservas.html";
+});
+
+const cerrar = document.querySelector("#cerrar");
+cerrar.addEventListener("click", () => {
+    alert("Sesion Cerrada");
+    localStorage.removeItem("logueado");
+    location.reload();
+});
+
+const borrar = document.querySelector("#borrar");
+borrar.addEventListener("click", () => {
+    alert("Usuario Borrado");
+    localStorage.removeItem("usuario");
+    localStorage.removeItem("logueado");
+    location.reload();
+})
+
 
 const mode = document.getElementById("mode"); 
 
@@ -59,6 +112,8 @@ if(localStorage.getItem("modo") === "dark-mode"){
 else{
     document.body.classList.remove("dark-mode");
 }
+
+
 
 
 
