@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    
+    /*outline: 1px solid red !important;*/
 }
 
 @font-face {
@@ -103,9 +103,11 @@ footer {
 }
 
 #carrusel {
-    width: 1860px;
+    width: 100%;           
+    max-width: 1200px;    
     margin: 0 auto;
     overflow: hidden;
+    position: relative;
 }
 
 
@@ -117,9 +119,10 @@ footer {
 }
 
 #img-carrusel img {
-    width: 600px;
+    width: calc(33.33% - 20px); 
     flex-shrink: 0;
     border-radius: 5px;
+    object-fit: cover;
 }
 
 .btn-carrusel{
@@ -237,7 +240,7 @@ footer {
 
 #texto_nosotros p {
     margin-bottom: 20px;
-    font-size: 1.2rem;
+    font-size: 17px;
     color: var(--color-fuente);           
 }
 
@@ -338,6 +341,7 @@ footer {
     letter-spacing: 1px;
     color: var(--color-secundario);
     transform: scale(1.7);
+    width: 100%;
 }
 
 #footer{
@@ -382,4 +386,80 @@ body.dark-mode{
     background-image: url(./assets/imagenes/background_darkmode.png);
 }
 
+body.dark-mode #logo_navbar {
+    content: url(/proyecto/assets/imagenes/logo_darkmode.png);
+}
+
+body.dark-mode #img_footer {
+    content: url(/proyecto/assets/imagenes/logo_darkmode.png);
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #logo-navbar {
+        width: 20%;
+    }
+
+    #pages {
+        width: 20%;
+    }
+
+    #mode-container {
+        width: 20%;
+    }
+
+    #fotocancha {
+        width: 422px;
+    }
+
+    #texto_nosotros {
+        width: 402px;
+        padding: 20px;
+    }
+
+    #texto_nosotros p {
+        font-size: 10.5px;
+        margin: 0;
+    }
+
+    #preguntas {
+        font-size: 80%;
+    }
+
+    #ubi_texto {
+        font-size: 90%;
+    }
+
+    #mapa {
+        width: 40%;
+    }
+
+    #mapa iframe {
+        width: 400px;
+        height: 300px;
+    }
+
+    #whatsapp {
+        width: 20px;
+    }
+
+    #cont_footer {
+        max-width: 1024px;
+    }
+
+    .col_footer {
+        min-width: 100px;
+    }
+
+    .col_footer p {
+        font-size: 10px;
+    }
+
+    #img_footer {
+        max-width: 200px;
+    }
+
+    #presentacion::before {
+        transform: scale(1);
+    }
+}
 
