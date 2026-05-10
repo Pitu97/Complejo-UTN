@@ -1,3 +1,20 @@
+*{
+    outline: 1px solid red !important;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+#main-reservas{
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 20px 0;
+}
+
 .fecha, .cancha-fila {
     display: grid;
     grid-template-columns: 200px repeat(17, 1fr);
@@ -109,9 +126,11 @@
 
 #reserva-header h1{
     padding-top: 10px;
+    font-size: 2.5rem; 
+    text-align: center;
+    width: 100%;
+    margin: 20px 0;
     letter-spacing: 2px;
-    transform: scale(1.3);
-    font-weight: 800;
     color: var(--color-secundario);
 }
 
@@ -121,4 +140,41 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+
+    #main-reservas {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #reserva-header h1 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .contenedor-grilla {
+        overflow-x: auto;
+    }
+
+    .fecha, .cancha-fila {
+        min-width: 950px; 
+    }
+
+    .form-reserva {
+        display: flex;
+        justify-content: space-around;
+        gap: 10px;
+    }
+
+    .form-reserva div {
+        flex: 1; 
+        text-align: center;
+    }
+
+    .form-reserva select, .btn-reserva {
+        width: 100%;
+    }
 }
