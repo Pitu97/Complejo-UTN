@@ -7,7 +7,11 @@ const visibles = 3;
 let actual = 0;
 
 function moverCarrusel() {
-    const desplazamiento = actual * 620;
+    const anchoImagen = imagenes.children[0].clientWidth;
+    const gap = 20;
+
+    const desplazamiento = actual * (anchoImagen + gap);
+
     imagenes.style.transform = `translateX(-${desplazamiento}px)`;
 }
 
