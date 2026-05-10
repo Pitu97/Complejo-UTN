@@ -32,7 +32,7 @@
     margin: 5px;
 }
 
-.form button {
+button {
     background-color: var(--color-principal);
     color: var(--color-secundario);
     transition: all 0.3s ease;
@@ -44,13 +44,72 @@
     margin-bottom: 20px;
 }
 
-.form button:hover {
+button:hover {
     background-color: var(--color-secundario);
     color: var(--color-principal);
 }
 
-#divisor {
-    width: 2px;
-    height: auto;
-    background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.5), transparent);
+#user_page {
+    width: 70%;
+    background-color: var(--color-secundario);
+    border-radius: 10px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+#cont1 {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+#cont2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#foto_user {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--color-principal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#foto_user img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#cont3 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#cont3 ul {
+    padding-left: 20px;
+}
+
+#cont4 {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+#cont4 button {
+    margin: 0;
 }

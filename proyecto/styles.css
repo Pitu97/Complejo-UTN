@@ -13,6 +13,9 @@
 
 body {
     font-family: 'MiFuente', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 :root {
@@ -91,6 +94,7 @@ main {
     text-align: center;
     background-image: url(/proyecto/assets/imagenes/background.png);
     background-size: cover;
+    flex: 1;
 }
 
 footer {
