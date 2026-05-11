@@ -117,6 +117,7 @@ borrar.addEventListener("click", () => {
     alert("Usuario Borrado");
     localStorage.removeItem("usuario");
     localStorage.removeItem("logueado");
+    localStorage.removeItem("misreservas");
     location.reload();
 })
 
