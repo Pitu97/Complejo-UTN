@@ -108,8 +108,31 @@ button:hover {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 #cont4 button {
     margin: 0;
+}
+
+@media (max-width: 426px){
+    #user_page {
+        gap: 10px;
+        font-size: 10px;
+    }
+    
+    .cont {
+        gap: 10px;
+    }
+
+    #foto_user {
+        width: 70px;
+        height: 50px;
+        border-radius: 100%;
+    }
+
+    .cont button {
+       width: 100px; 
+       font-size: 10px;
+    }
 }
