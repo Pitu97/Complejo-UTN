@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    /*outline: 1px solid red !important;*/
+    outline: 1px solid red !important;
 }
 
 @font-face {
@@ -32,6 +32,7 @@ html{
 #navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: var(--color-secundario);
     position: sticky;
     top: 0;
@@ -67,6 +68,15 @@ html{
 #pages li:hover {
     background-color: var(--color-principal);
     color: var(--color-secundario);
+}
+
+#burger {
+    display: none;
+}
+
+#burger img {
+    cursor: pointer;
+    width: 60px;
 }
 
 #mode-container {
@@ -398,7 +408,7 @@ body.dark-mode #img_footer {
     content: url(/proyecto/assets/imagenes/logo_darkmode.png);
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
     #logo-navbar {
         width: 20%;
     }
@@ -467,14 +477,45 @@ body.dark-mode #img_footer {
     }
 }
 
-@media (max-width: 768px) and (min-width: 425px){
-
+@media (max-width: 768px) {
     #logo-navbar {
         width: 10%;
     }
 
+    #burger {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-secundario);
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: 
+            max-height 0.4s ease,
+            opacity 0.3s ease,
+            transform 0.3s ease;
+    }
+
+    nav.active {
+        max-height: 500px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
     #pages {
-        width: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 20px 0;
+        gap: 20px;
     }
 
     #mode-container {
