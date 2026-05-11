@@ -50,4 +50,18 @@
     .track img{
     width: 49%;
     }
+
+}
+@media(max-width:426px){
+    #btn-reserva h2{
+        font-size: 85%;
+        width:60%;
+        
+    }
+     .track img{
+        width:100%;
+    }
+    .canchas{
+        font-size: 15px;
+    }
 }
