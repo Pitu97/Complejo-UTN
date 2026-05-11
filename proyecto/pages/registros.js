@@ -66,18 +66,39 @@ const corr_u = document.querySelector("#correo-u");
 const tel_u = document.querySelector("#telefono-u");
 const res_g = document.querySelector("#lista-reservas");
 
-const reservas = JSON.parse(localStorage.getItem("misreservas"));
+let reservas = JSON.parse(localStorage.getItem("misreservas")) || [];
+
+function mostrarReservas() {
+    res_g.innerHTML = "";
+    reservas.forEach((reserva, index) => {
+        const li = document.createElement("li");
+        li.textContent = `Cancha ${reserva.canchaid} - ${reserva.hora}:00 hs`;
+        
+        const eliminar = document.createElement("button");
+        eliminar.textContent = "Eliminar";
+        eliminar.classList.add("eliminar");
+        eliminar.dataset.index = index;
+
+        li.appendChild(eliminar);
+        res_g.appendChild(li);
+    })
+}
 
 if(usuario && logueado) {
     nom_u.textContent = usuario.nombre + " " + usuario.apellido;
     corr_u.innerHTML = `<strong>Correo:</strong> ${usuario.mail}`;
     tel_u.innerHTML = `<strong>Telefono:</strong> ${usuario.telefono}`
-    reservas.forEach(reserva => {
-        const li = document.createElement("li");
-        li.textContent = `Cancha ${reserva.canchaid} - ${reserva.hora}:00 hs`;
-        res_g.appendChild(li);
-    })
+    mostrarReservas();
 }
+
+res_g.addEventListener("click", (e) => {
+    if (e.target.classList.contains("eliminar")) {
+        const index = e.target.dataset.index;
+        reservas.splice(index, 1);
+        localStorage.setItem("misreservas", JSON.stringify(reservas));
+        mostrarReservas();
+    }
+})
 
 const reserva = document.querySelector("#res");
 reserva.addEventListener("click", () => {
