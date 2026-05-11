@@ -18,7 +18,7 @@ function cargarreservas() {
 }
 
 function confirmarreserva() {
-    const usuario = JSON.parse(localStorage.getItem('usuario'));
+    const usuario = JSON.parse(localStorage.getItem('logueado'));
     
     if (!usuario) {
         alert("Debes iniciar sesión para reservar");

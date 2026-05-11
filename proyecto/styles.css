@@ -344,7 +344,7 @@ footer {
     margin-bottom: 35px;
     letter-spacing: 1px;
     color: var(--color-secundario);
-    transform: scale(1.7);
+    font-size: 35px;
     width: 100%;
 }
 

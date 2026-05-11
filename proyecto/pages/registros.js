@@ -64,11 +64,19 @@ login.addEventListener("submit", (e) => {
 const nom_u = document.querySelector("#nombre-u");
 const corr_u = document.querySelector("#correo-u");
 const tel_u = document.querySelector("#telefono-u");
+const res_g = document.querySelector("#lista-reservas");
+
+const reservas = JSON.parse(localStorage.getItem("misreservas"));
 
 if(usuario && logueado) {
     nom_u.textContent = usuario.nombre + " " + usuario.apellido;
     corr_u.innerHTML = `<strong>Correo:</strong> ${usuario.mail}`;
     tel_u.innerHTML = `<strong>Telefono:</strong> ${usuario.telefono}`
+    reservas.forEach(reserva => {
+        const li = document.createElement("li");
+        li.textContent = `Cancha ${reserva.canchaid} - ${reserva.hora}:00 hs`;
+        res_g.appendChild(li);
+    })
 }
 
 const reserva = document.querySelector("#res");
