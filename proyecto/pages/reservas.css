@@ -1,0 +1,180 @@
+/*{
+    outline: 1px solid red !important;
+}*/
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+#main-reservas{
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 20px 0;
+    padding-bottom: 0;
+}
+
+.fecha, .cancha-fila {
+    display: grid;
+    grid-template-columns: 200px repeat(17, 1fr);
+    align-items: center;
+    border-bottom: 1px solid #444;
+    color: var(--color-secundario)
+}
+
+.caja-horarios {
+    display: grid;
+    grid-template-columns: repeat(17, 1fr);
+    grid-column: 2 / 19; 
+    height: 100%;
+    min-height: 50px;
+    background-color: var(--color-secundario); 
+}
+
+.bloque-reserva {
+    background-color:var(--color-principal);
+    height: 35px;
+    margin: 5px 2px;
+    border-radius: 2px;
+    grid-row: 1;
+    align-self: center;
+}
+
+#filtro-fecha {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: var(--color-secundario);
+    border: 1px solid #444;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: fit-content;
+}
+
+#filtro-fecha label {
+    color: var(--color-principal);
+    font-size: 90%;
+}
+
+#fecha-reserva {
+    padding: 8px 12px;
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+    border: 1px solid #555;
+    border-radius: 3px;
+    font-family: inherit;
+    font-size: 100%;
+}
+
+
+.panel-oscuro {
+    background-color: var(--color-principal); 
+    padding: 20px;
+    margin-top: 10px;
+    border-top: 2px solid #444;
+
+}
+
+.ticket-horizontal h3 {
+    margin: 0 0 15px 0;
+    color: var(--color-secundario);
+    text-align: center;
+}
+
+.form-reserva {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.form-reserva label {
+    display: block;
+    color: var(--color-secundario);
+    font-size: 85%;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.form-reserva select {
+    padding: 8px;
+    background-color:var(--color-secundario);
+    color: var(--color-principal);
+    border: 1px solid #444;
+    border-radius: 3px;
+    font-family: inherit;
+}
+
+.btn-reserva {
+    padding: 10px 20px;
+    background-color: green; 
+    color: var(--color-secundario);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    height: 35px; 
+}
+
+.btn-reserva:hover {
+    background-color: #2bcf6f;
+}
+
+#reserva-header h1{
+    padding-top: 10px;
+    font-size: 250%; 
+    text-align: center;
+    width: 100%;
+    margin: 20px 0;
+    letter-spacing: 2px;
+    color: var(--color-secundario);
+}
+
+.cancha-label {
+    color: var(--color-secundario);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    #main-reservas {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #reserva-header h1 {
+        font-size: 170%;
+        margin-bottom: 30px;
+    }
+
+    .contenedor-grilla {
+        overflow-x: auto;
+    }
+
+    .fecha, .cancha-fila {
+        min-width: 950px; 
+    }
+
+    .form-reserva {
+        display: flex;
+        justify-content: space-around;
+        gap: 10px;
+    }
+
+    .form-reserva div {
+        flex: 1; 
+        text-align: center;
+    }
+
+    .form-reserva select, .btn-reserva {
+        width: 100%;
+    }
+}

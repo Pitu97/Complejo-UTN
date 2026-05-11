@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="reservas.css">
     <title>Document</title>
 </head>
 
@@ -25,17 +26,115 @@
                 <a href="registros.html">
                     <li>Registro</li>
                 </a>
-                <a href="contacto.html">
-                    <li>Contacto</li>
-                </a>
             </ul>
         </nav>
         <div id="mode-container">
             <img src="../assets/imagenes/light_mode.png" alt="light_mode" id="mode">
         </div>
     </header>
-    <main>
+  
+    <main id="main-reservas">
+        <section id="reserva-header">
+            <h1>Disponibilidad de Canchas</h1>
+        </section>
+        <section id="filtro-fecha">
+            <label for="fecha-reserva">Selecciona el dia:</label>
+            <input type="date" id="fecha-reserva">
+        </section>
+        <div class="contenedor-grilla">
+            <div class="fecha">
+                <div class="cancha-label">Canchas</div>
+                <div>08</div><div>09</div><div>10</div><div>11</div><div>12</div><div>13</div>
+                <div>14</div><div>15</div><div>16</div><div>17</div><div>18</div><div>19</div>
+                <div>20</div><div>21</div><div>22</div><div>23</div><div>00</div>
+            </div>
 
+            <div class="cancha-fila">
+                <div class="cancha-label">Cancha 1 - Futbol 11</div>
+                <div class="caja-horarios" id="cancha-1"></div>
+            </div>
+
+            <div class="cancha-fila">
+                <div class="cancha-label">Cancha 2 - Futbol 7</div>
+                <div class="caja-horarios" id="cancha-2"></div>
+            </div>
+                
+            <div class="cancha-fila">
+                <div class="cancha-label">Cancha 3 - Futbol 7</div>
+                <div class="caja-horarios" id="cancha-3"></div>
+            </div>
+            <div class="cancha-fila">
+                <div class="cancha-label">Cancha 4 - Futbol 5</div>
+                <div class="caja-horarios" id="cancha-4"></div>
+            </div>
+            <div class="cancha-fila">
+                <div class="cancha-label">Cancha 5 - Futbol 5</div>
+                <div class="caja-horarios" id="cancha-5"></div>
+            </div>
+            <div class="cancha-fila">
+                <div class="cancha-label">Cancha 6 - Basquet</div>
+                <div class="caja-horarios" id="cancha-6"></div>
+            </div>
+            <div class="cancha-fila">
+                <div class="cancha-label">Cancha 7 - Basquet</div>
+                <div class="caja-horarios" id="cancha-7"></div>
+            </div>
+            <div class="cancha-fila">
+                <div class="cancha-label">Cancha 8 - Tenis</div>
+                <div class="caja-horarios" id="cancha-8"></div>
+            </div>
+        </div>
+
+    <section id="confirmacion-panel" class="panel-oscuro">
+        <div class="ticket-horizontal">
+            <h3>Hace tu reserva</h3>
+            
+            <div class="form-reserva">
+                <div>
+                    <label>Cancha:</label>
+                    <select id="select-cancha">
+                        <option value="1">Cancha 1 - futbol 11</option>
+                        <option value="2">Cancha 2 - futbol 7</option>
+                        <option value="3">Cancha 3 - futbol 7</option>
+                        <option value="4">Cancha 4 - futbol 5</option>
+                        <option value="5">Cancha 5 - futbol 5</option>
+                        <option value="6">Cancha 6 - basquet</option>
+                        <option value="7">Cancha 7 - basquet</option>
+                        <option value="8">Cancha 8 - tenis</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Hora:</label>
+                    <select id="select-hora">
+                        <option value="08">08:00</option>
+                        <option value="09">09:00</option>
+                        <option value="10">10:00</option>
+                        <option value="11">11:00</option>
+                        <option value="12">12:00</option>
+                        <option value="13">13:00</option>
+                        <option value="14">14:00</option>
+                        <option value="15">15:00</option>
+                        <option value="16">16:00</option>
+                        <option value="17">17:00</option>
+                        <option value="18">18:00</option>
+                        <option value="19">19:00</option>
+                        <option value="20">20:00</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Duracion:</label>
+                    <select id="select-duracion">
+                        <option value="1">1 hora</option>
+                        <option value="2">2 horas</option>
+                    </select>
+                </div>
+                
+                <button id="btn-confirmar" class="btn-reserva">Confirmar Turno</button>
+            </div>
+        </div>
+    </section>
     </main>
     <footer id="footer">
         <div id="cont_footer">
@@ -48,7 +147,7 @@
                 <p>Email: info@complejoutn.com</p>
                 <p>Tel: +1111111</p>
                 <p>Horario: Lun-Dom</p>
-                <p>9:00AM - 23:00PM</p>
+                <p>8:00AM - 23:00PM</p>
             </div>
             <div class="col_footer">
                 <h3>Servicios</h3>
@@ -64,6 +163,7 @@
             </div>
         </div>
     </footer>
+    <script src="reservas.js"></script>
 </body>
 
 </html>

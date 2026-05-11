@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    
+    /*outline: 1px solid red !important;*/
 }
 
 @font-face {
@@ -13,12 +13,20 @@
 
 body {
     font-family: 'MiFuente', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 :root {
     --color-principal:#0b4d87;
     --color-secundario:#dbe7ff;
     --color-fuente: black;
+}
+
+
+html{
+    scroll-behavior: smooth;
 }
 
 #navbar {
@@ -86,6 +94,7 @@ main {
     text-align: center;
     background-image: url(/proyecto/assets/imagenes/background.png);
     background-size: cover;
+    flex: 1;
 }
 
 footer {
@@ -98,11 +107,11 @@ footer {
 }
 
 #carrusel {
-    width: 100%;
-    max-width: 1185px;
-    position: relative;
+    width: 100%;           
+    max-width: 1200px;    
     margin: 0 auto;
     overflow: hidden;
+    position: relative;
 }
 
 
@@ -114,10 +123,10 @@ footer {
 }
 
 #img-carrusel img {
-    width: calc(33.33% - 20px);
-    object-fit: cover;
+    width: calc(33.33% - 20px); 
     flex-shrink: 0;
     border-radius: 5px;
+    object-fit: cover;
 }
 
 .btn-carrusel{
@@ -235,7 +244,7 @@ footer {
 
 #texto_nosotros p {
     margin-bottom: 20px;
-    font-size: 1.2rem;
+    font-size: 17px;
     color: var(--color-fuente);           
 }
 
@@ -335,7 +344,8 @@ footer {
     margin-bottom: 35px;
     letter-spacing: 1px;
     color: var(--color-secundario);
-    transform: scale(1.7);
+    font-size: 250%;
+    width: 100%;
 }
 
 #footer{
@@ -371,45 +381,170 @@ footer {
 .col_footer p:hover{
     color: var(--color-principal);
 }
-@media (max-width:1400px){
-    #fotocancha{
-        width:80%;
-        margin-right: 50px ;
-    }
-    #texto_nosotros{
-        width:90% ;
-        margin-right: 50px;
-    }
-    #texto_nosotros p{
-        font-size:70%;
-    }
-    #preguntas{
-        font-size:85%;
-    }
-    
-    #mapa{
-        width: 90%;
-        margin-left: 50px;
-    }
-    #mapa iframe {
-    
-        width: 90%;
-    }
-    #ubi_texto{
-        font-size:95% ;
-        margin-left: 50px;
-    }
-    #cont_footer {
-        gap: 50px;
+body.dark-mode{
+    --color-principal: #4da3ff;
+    --color-secundario: #0b4d87;
+    --color-fuente: black;
+}
+.dark-mode main{
+    background-image: url(./assets/imagenes/background_darkmode.png);
+}
 
+body.dark-mode #logo_navbar {
+    content: url(/proyecto/assets/imagenes/logo_darkmode.png);
+}
+
+body.dark-mode #img_footer {
+    content: url(/proyecto/assets/imagenes/logo_darkmode.png);
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #logo-navbar {
+        width: 20%;
     }
-    .col_footer {
-        width: 90px;
+
+    #pages {
+        width: 20%;
+    }
+
+    #mode-container {
+        width: 20%;
+    }
+
+    #fotocancha {
+        width: 422px;
+    }
+
+    #texto_nosotros {
+        width: 402px;
+        padding: 20px;
+    }
+
+    #texto_nosotros p {
+        font-size: 10.5px;
+        margin: 0;
+    }
+
+    #preguntas {
         font-size: 80%;
-        gap:50px;
     }
-    #img_footer{
+
+    #ubi_texto {
+        font-size: 90%;
+    }
+
+    #mapa {
+        width: 40%;
+    }
+
+    #mapa iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    #whatsapp {
+        width: 20px;
+    }
+
+    #cont_footer {
+        max-width: 1024px;
+    }
+
+    .col_footer {
+        min-width: 100px;
+    }
+
+    .col_footer p {
+        font-size: 10px;
+    }
+
+    #img_footer {
         max-width: 200px;
     }
 
+    #presentacion::before {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 768px) and (min-width: 425px){
+
+    #logo-navbar {
+        width: 10%;
+    }
+
+    #pages {
+        width: 10%;
+    }
+
+    #mode-container {
+        width: 15%;
+    }
+
+    #fotocancha {
+        width: 350px;
+    }
+
+    #nosotros{
+        height: 100%;
+    }
+
+    #texto_nosotros {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #texto_nosotros p {
+        font-size: 50%;
+        margin: 0;
+        line-height: 1;
+    }
+
+    #preguntas {
+        font-size: 80%;
+    }
+
+    #ubi_texto {
+        font-size: 90%;
+        height: 300px;
+        font-size: 80%;
+        line-height: 0.9;
+    }
+
+    #mapa {
+        width: 100%;
+    }
+
+    #mapa iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    #whatsapp {
+        width: 15px;
+    }
+
+    #cont_footer {
+        max-width: 1024px;
+    }
+
+    .col_footer {
+        min-width: 10px;
+    }
+
+    .col_footer p {
+        font-size: 7px;
+    }
+
+    .col_footer h3 {
+        font-size: 70%;
+    }
+    #img_footer {
+        max-width: 120px;
+    }
+
+    #presentacion::before {
+        transform: scale(1);
+    }
+    
 }
