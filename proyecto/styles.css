@@ -589,3 +589,74 @@ body.dark-mode #img_footer {
     }
     
 }
+
+@media (max-width: 426px) {
+    #nosotros {
+        flex-direction: column;
+    }
+
+    #fotocancha {
+        width: 95%;
+    }
+
+    #texto_nosotros {
+        width: 94%;
+    }
+
+    #texto_nosotros p {
+        font-size: 80%;
+    }
+
+    #preguntas {
+        font-size: 70%;
+    }
+
+    .pregunta {
+        padding: 0;
+    }
+
+    #contacto {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #ubi_texto {
+        width: 75%;
+        margin-left: 22px;
+    }
+
+    #mapa {
+        width: 85%;
+        height: 250px;
+    }
+
+    #mapa iframe {
+        width: 100%;
+    }
+
+    #cont_footer {
+        max-width: 426px;
+        width: 95%;
+    }
+
+    .col_footer p {
+        font-size: 4px;
+    }
+
+    .col_footer h3 {
+        font-size: 50%;
+    }
+
+    #img_footer {
+        max-width: 85px;
+    }
+
+    #titulo-imgcomplejo {
+        font-size: 100%;
+        width: 95%;
+    }
+
+    #img-carrusel img {
+        width: 100%;
+    }
+}
