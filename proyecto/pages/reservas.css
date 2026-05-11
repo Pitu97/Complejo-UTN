@@ -143,7 +143,7 @@ body {
     text-align: center;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
 
     #main-reservas {
         width: 100%;
@@ -176,5 +176,110 @@ body {
 
     .form-reserva select, .btn-reserva {
         width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #main-reservas {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #reserva-header h1 {
+        font-size: 150%;
+        margin-bottom: 20px;
+    }
+
+    .contenedor-grilla {
+        overflow-x: auto;
+    }
+
+    .fecha, .cancha-fila {
+        min-width: 950px; 
+    }
+
+    .form-reserva {
+        display: flex;
+        justify-content: space-around;
+        gap: 10px;
+    }
+
+    .form-reserva div {
+        flex: 1; 
+        text-align: center;
+    }
+
+    .form-reserva select, .btn-reserva {
+        width: 100%;
+    }
+
+    #filtro-fecha{
+        width: 60%; 
+        max-width: 100%;
+        box-sizing: border-box
+    }
+
+    #filtro-fecha label {
+        display: block;     
+        width: 100%;        
+        margin-bottom: 5px;
+    }
+
+    #fecha-reserva {
+        width: 50%;       
+        padding: 10px;       
+    }
+}
+
+@media (max-width: 426px){
+
+    #main-reservas {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #reserva-header h1 {
+        font-size: 150%;
+        margin-bottom: 20px;
+    }
+
+    .contenedor-grilla {
+        overflow-x: auto;
+    }
+
+    .fecha, .cancha-fila {
+        min-width: 800px; 
+    }
+    
+    .form-reserva {
+        flex-direction: column; 
+        align-items: stretch; 
+        gap: 10px;
+        font-size: 80%;
+    }
+
+    .form-reserva div {
+        flex: 1; 
+        text-align: center;
+    }
+
+    .form-reserva select, .btn-reserva {
+        width: 100%;
+    }
+
+    #filtro-fecha{
+        width: 90%; 
+        max-width: 100%;
+    }
+
+    #filtro-fecha label {
+        width: 100%;        
+        margin-bottom: 5px;
+    }
+
+    #fecha-reserva {
+        width: 50%;       
+        padding: 10px;       
     }
 }
