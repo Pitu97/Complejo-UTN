@@ -634,21 +634,33 @@ body.dark-mode #img_footer {
         width: 100%;
     }
 
+    #footer {
+        padding: 1%;
+    }
     #cont_footer {
-        max-width: 426px;
+        flex-direction: column;
+        gap: 5px;
+        max-width: 100%;
         width: 95%;
+        margin: 0 auto;
+    }
+    .col_footer {
+        width: 95%;
+        min-width: auto;
+        text-align: center;
     }
 
     .col_footer p {
-        font-size: 4px;
+        font-size: 12px;
     }
 
     .col_footer h3 {
-        font-size: 50%;
+        font-size: 16px;
     }
 
     #img_footer {
-        max-width: 85px;
+        max-width: 120px;
+        margin: 0 auto;
     }
 
     #titulo-imgcomplejo {
