@@ -27,13 +27,13 @@ Estructura del proyecto
 │   └── app.js          # Lógica del carrusel, acordeón y modo oscuro, spinner de carga.
 ├── /assets             #Recursos estaticos del sitio
 |    └── /img            #Subcarpetas para todas las imagenes y capturas.
-│        ├── ![vista-movil](/proyecto/img.readme/vista-movil.png) # Fondo de bienvenida móvil
-│        ├── ![vista-general](/proyecto/img.readme/vista-general.png) # Fondo de bienvenida escritorio
-│        ├── ![carrusel](/proyecto/img.readme/carrusel.png) # Carrusel y acordeón
-│        ├── ![mapa-interactivo](/proyecto/img.readme/mapa-interactivo.png) # Mapa interactivo
-│        ├── ![reservas](/proyecto/img.readme/reservas.png)  # Panel de reservas (reservas)
-│        └── ![reservas-registradas](/proyecto/img.readme/reservas-registradas.png) # Formulario de reserva
-|         └── ![modo-oscuro](/proyecto/img.readme/modo-oscuro.png) # Modo oscuro.
+│        ├── ![vista-movil](/img.readme/vista-movil.png) # Fondo de bienvenida móvil
+│        ├── ![vista-general](/img.readme/vista-general.png) # Fondo de bienvenida escritorio
+│        ├── ![carrusel](/img.readme/carrusel.png) # Carrusel y acordeón
+│        ├── ![mapa-interactivo](/img.readme/mapa-interactivo.png) # Mapa interactivo
+│        ├── ![reservas](/img.readme/reservas.png)  # Panel de reservas (reservas)
+│        └── ![reservas-registradas](/img.readme/reservas-registradas.png) # Formulario de reserva
+|         └── ![modo-oscuro](/img.readme/modo-oscuro.png) # Modo oscuro.
 ├──/pages #Secciones secundarias (canchas, reservas, etc.)
 |   ├── canchas.html
 |   ├── registro.html
