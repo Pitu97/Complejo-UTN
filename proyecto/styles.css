@@ -16,6 +16,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
 }
 
 :root {
@@ -121,11 +123,13 @@ footer {
     max-width: 1200px;    
     margin: 0 auto;
     overflow: hidden;
+    overflow-x: hidden;
     position: relative;
 }
 
 
 #img-carrusel{
+    width: 100%;
     display: flex;
     gap: 20px;
     transition: transform 0.5s ease;
@@ -295,16 +299,16 @@ footer {
     width: 450px;    
 }
 
-#diseñocomplejo {
+#disenocomplejo {
     width: 100%;        
     max-width: 700px;  
     margin: 50px auto;    
 }
 
-#img-diseño {
+#img-diseno {
     width: 100%;       
     height: auto;       
-    display: block;     
+    display: block;    
 }
 
 .contenedor-mapa {
@@ -409,8 +413,8 @@ body.dark-mode #img_footer {
 }
 
 @media (max-width: 1024px) {
-    #logo-navbar {
-        width: 20%;
+    #logo_navbar {
+        width: 150px;
     }
 
     #pages {
@@ -478,8 +482,8 @@ body.dark-mode #img_footer {
 }
 
 @media (max-width: 768px) {
-    #logo-navbar {
-        width: 10%;
+    #logo_navbar {
+        width: 120px;
     }
 
     #burger {
@@ -591,6 +595,29 @@ body.dark-mode #img_footer {
 }
 
 @media (max-width: 426px) {
+    #navbar {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    #logo_navbar {
+        width: 100px;
+        padding: 5px;
+    }
+
+    #pages {
+        width: 100%;
+    }
+
+    nav {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    #mode-container {
+        width: auto;
+    }
+
     #nosotros {
         flex-direction: column;
     }
@@ -668,7 +695,40 @@ body.dark-mode #img_footer {
         width: 95%;
     }
 
+    #img-carrusel {
+        gap: 20px;
+    }
+
     #img-carrusel img {
+        min-width: 100%;
         width: 100%;
+        flex-shrink: 0;
+    }
+
+    #presentacion {
+        overflow: hidden;
+    }
+
+    #presentacion::before {
+        transform: scale(1);
+    }
+
+    #logo_presentacion {
+        width: 400px;
+    }
+
+    #disenocomplejo {
+        padding: 0 10px;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    #img-diseno {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
     }
 }
