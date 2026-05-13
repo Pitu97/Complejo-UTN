@@ -620,9 +620,19 @@ body.dark-mode #img_footer {
         gap: 20px;
     }
 
-    #ubi_texto {
+    #ubi_texto  {
         width: 75%;
         margin-left: 22px;
+        font-size: 100%;
+    }
+    #ubi_texto  img{
+        margin-bottom: 14%;
+        width: 25px;
+        padding: 0;
+    }
+
+    #numero-wpp p{
+        padding-left: 2%;
     }
 
     #mapa {
