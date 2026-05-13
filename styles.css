@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: MiFuente;
-    src: url(/assets/fonts/ZenDots-Regular.ttf) format('woff');
+    src: url(assets/fonts/ZenDots-Regular.ttf) format('woff');
     font-weight: normal;
     font-size: normal;
 }
@@ -104,7 +104,7 @@ html{
 
 main {
     text-align: center;
-    background-image: url(/assets/imagenes/background.png);
+    background-image: url(assets/imagenes/background.png);
     background-size: cover;
     flex: 1;
 }
@@ -401,15 +401,15 @@ body.dark-mode{
     --color-fuente: black;
 }
 .dark-mode main{
-    background-image: url(./assets/imagenes/background_darkmode.png);
+    background-image: url(assets/imagenes/background_darkmode.png);
 }
 
 body.dark-mode #logo_navbar {
-    content: url(/assets/imagenes/logo_darkmode.png);
+    content: url(assets/imagenes/logo_darkmode.png);
 }
 
 body.dark-mode #img_footer {
-    content: url(/assets/imagenes/logo_darkmode.png);
+    content: url(assets/imagenes/logo_darkmode.png);
 }
 
 #loader {
