@@ -150,6 +150,15 @@ burger.addEventListener("click", () => {
     nav.classList.toggle("active");
 });
 
+window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+
+    loader.style.opacity = "0";
+
+    setTimeout(() => {
+        loader.style.display = "none";
+    }, 2000);
+});
 
 
 

@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    outline: 1px solid red !important;
+    /*outline: 1px solid red !important;*/
 }
 
 @font-face {
@@ -410,6 +410,31 @@ body.dark-mode #logo_navbar {
 
 body.dark-mode #img_footer {
     content: url(/proyecto/assets/imagenes/logo_darkmode.png);
+}
+
+#loader {
+    position: fixed;
+    inset: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner {
+    width: 70px;
+    height: 70px;
+    border: 8px solid #dbe7ff;
+    border-top: 8px solid #0b4d87;
+    border-radius: 50%;
+    animation: girar 1s linear infinite;
+}
+
+@keyframes girar {
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @media (max-width: 1024px) {
