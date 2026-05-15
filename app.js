@@ -6,25 +6,12 @@ const visibles = 3;
 
 let actual = 0;
 function moverCarrusel() {
-    // Obtenemos el ancho actual de la primera imagen
     const anchoImagen = imagenes.children[0].clientWidth;
-    const gap = 20; // El gap que definiste en el CSS
-
-    // Calculamos el desplazamiento dinámicamente
+    const gap = 20; 
     const desplazamiento = actual * (anchoImagen + gap);
 
     imagenes.style.transform = `translateX(-${desplazamiento}px)`;
 }
-/*
-function moverCarrusel() {
-    const anchoImagen = imagenes.children[0].clientWidth;
-    const gap = 20;
-
-    const desplazamiento = actual * (anchoImagen + gap);
-
-    imagenes.style.transform = `translateX(-${desplazamiento}px)`;
-}
- */
 
 botonSiguiente.addEventListener("click", () => {
     if (actual < total - visibles) {
@@ -55,9 +42,9 @@ preguntas.forEach((pregunta) => {
         pregunta.classList.toggle("activo");
 
         if(pregunta.classList.contains("activo")) {
-            resp.style.maxHeight = resp.scrollHeight + "px";
+            resp.style.maxHeight = resp.scrollHeight + 50 + "px";
         } else {
-            resp.style.maxHeight = 0;
+            resp.style.maxHeight = null;
         }
     });
 });
