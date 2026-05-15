@@ -45,7 +45,9 @@
                 <h2>Inicia Sesion</h2>
                 <form class="form">
                     <input type="email" id="correo" placeholder="Correo Electronico">
+                    <span class="error"></span>
                     <input type="password" id="contraseña" placeholder="Contraseña">
+                    <span class="error"></span>
                     <button type="submit">Ingresar</button>
                 </form>
             </div>
@@ -53,10 +55,18 @@
                 <h2>Registrarse</h2>
                 <form class="form">
                     <input type="text" id="nombre" placeholder="Nombre">
+                    <span class="error"></span>
                     <input type="text" id="apellido" placeholder="Apellido">
+                    <span class="error"></span>
                     <input type="text" id="telefono" placeholder="Telefono">
+                    <span class="error"></span>
                     <input type="email" id="correo-r" placeholder="Correo Electronico">
+                    <span class="error"></span>
                     <input type="password" id="contraseña-r" placeholder="Contraseña">
+                    <span class="error"></span>
+                    <div id="acuerdo">
+                        <input type="checkbox" id="tyc" value="TyC"><p>Recibir novedades por correo</p>
+                    </div>
                     <button type="submit">Registrarse</button>
                 </form>
             </div>
@@ -116,6 +126,12 @@
             </div>
         </div>
     </footer>
+    <div id="modal-overlay">
+        <div id="modal">
+            <p id="modal-text"></p>
+            <button id="cerrar-modal">Cerrar</button>
+        </div>
+    </div>
     <script src="registros.js"></script>
 </body>
 </html>
