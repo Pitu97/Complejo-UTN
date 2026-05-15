@@ -1,35 +1,73 @@
 #reg-container {
     display: flex;
-    justify-content: space-evenly;
-    padding: 7.8% 0;
+    justify-content: center;
+    align-items: stretch;
+    gap: 40px;
+    padding: 80px 20px;
+    flex-wrap: wrap;
 }
 
 #reg-container h2 {
     color: var(--color-principal);
-    font-size: 35px;
+    font-size: clamp(24px, 3vw, 35px);
     padding: 15px;
+    text-align: center;
 }
 
 .formulario {
     background-color: var(--color-secundario);
     border-radius: 10px;
+    width: 100%;
+    max-width: 450px;
+    padding: 10px 0;
+    border: solid 2px var(--color-principal);
 }
 
 .form {
     display: flex;
     flex-direction: column;
-    padding: 0 25px;
-    height: 320px;
     align-items: center;
+    gap: 12px;
+    padding: 0 25px 25px;
+    width: 100%;
 }
 
 .form input {
-    width: 300px;
-    height: 25px;
-    border-radius: 10px; 
-    padding: 5px 15px;
+    width: 100%;
+    max-width: 320px;
+    min-height: 45px;
+    border-radius: 10px;
+    border: 2px solid var(--color-principal);
+    padding: 10px 15px;
     font-family: 'MiFuente', sans-serif;
-    margin: 5px;
+    transition:
+        border-color 0.3s ease,
+        transform 0.2s ease;
+}
+
+.form input:focus {
+    outline: none;
+    border-color: var(--color-principal);
+    transform: scale(1.01);
+}
+
+#acuerdo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+#acuerdo input {
+    width: auto;
+    min-height: unset;
+}
+
+#acuerdo p {
+    font-size: clamp(12px, 1.5vw, 14px);
 }
 
 button {
@@ -37,11 +75,12 @@ button {
     color: var(--color-secundario);
     transition: all 0.3s ease;
     font-family: 'MiFuente', sans-serif;
-    width: 200px;
-    height: 30px;
+    width: 100%;
+    max-width: 220px;
+    min-height: 45px;
     border-radius: 10px;
     margin-top: auto;
-    margin-bottom: 20px;
+    cursor: pointer;
 }
 
 button:hover {
@@ -49,14 +88,32 @@ button:hover {
     color: var(--color-principal);
 }
 
+.error {
+    color: red;
+    font-size: 12px;
+    width: 100%;
+    max-width: 320px;
+    padding-left: 10px;
+}
+
+.input-error {
+    border: 2px solid red !important;
+}
+
+.input-correcto {
+    border: 2px solid limegreen !important;
+}
+
 #user_page {
-    width: 70%;
+    width: min(95%, 1200px);
     background-color: var(--color-secundario);
     border-radius: 10px;
     padding: 40px;
     display: flex;
     flex-direction: column;
     gap: 40px;
+    margin: 80px auto;
+    border: solid 2px var(--color-principal);
 }
 
 .cont {
@@ -64,19 +121,16 @@ button:hover {
     justify-content: space-between;
     align-items: center;
     gap: 40px;
+    flex-wrap: wrap;
 }
 
 #cont1 {
     display: flex;
     align-items: center;
     gap: 25px;
+    flex-wrap: wrap;
 }
 
-#cont2 {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
 #foto_user {
     width: 140px;
     height: 140px;
@@ -86,6 +140,7 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
 }
 
 #foto_user img {
@@ -94,10 +149,18 @@ button:hover {
     object-fit: cover;
 }
 
+#cont2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    word-break: break-word;
+}
+
 #cont3 {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    flex: 1;
 }
 
 #cont3 ul {
@@ -111,28 +174,167 @@ button:hover {
     justify-content: center;
 }
 
-#cont4 button {
+#modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px;
+}
+
+#modal {
+    background-color: var(--color-secundario);
+    padding: 30px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    animation: aparecer 0.3s ease;
+}
+
+#modal p {
+    font-size: clamp(15px, 2vw, 18px);
+    text-align: center;
+}
+
+#cerrar-modal {
     margin: 0;
 }
 
-@media (max-width: 426px){
-    #user_page {
-        gap: 10px;
-        font-size: 10px;
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: scale(0.8);
     }
-    
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 1024px) {
+
+    #reg-container {
+        gap: 25px;
+        padding: 60px 20px;
+    }
+
+    .formulario {
+        max-width: 400px;
+    }
+
+    #user_page {
+        padding: 30px;
+    }
+
     .cont {
-        gap: 10px;
+        gap: 25px;
     }
 
     #foto_user {
-        width: 70px;
-        height: 50px;
-        border-radius: 100%;
+        width: 110px;
+        height: 110px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #reg-container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .cont button {
-       width: 100px; 
-       font-size: 10px;
+    .formulario {
+        max-width: 500px;
+    }
+
+    #user_page {
+        padding: 25px;
+        gap: 25px;
+    }
+
+    .cont {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #cont1 {
+        justify-content: center;
+    }
+
+    #cont2 {
+        align-items: center;
+    }
+
+    #cont3 {
+        width: 100%;
+    }
+
+    #cont4 {
+        width: 100%;
+    }
+
+    #cont4 button {
+        max-width: 250px;
+    }
+
+    #foto_user {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 426px) {
+
+    #reg-container {
+        padding: 40px 15px;
+    }
+
+    .formulario {
+        width: 100%;
+    }
+
+    .form {
+        padding: 0 15px 20px;
+    }
+
+    .form input {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    button {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    #user_page {
+        width: 95%;
+        padding: 20px;
+        gap: 20px;
+
+        font-size: 14px;
+    }
+
+    #foto_user {
+        width: 80px;
+        height: 80px;
+    }
+
+    #modal {
+        padding: 20px;
+    }
+
+    #modal p {
+        font-size: 15px;
     }
 }

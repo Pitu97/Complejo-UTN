@@ -1,3 +1,22 @@
+const modalOverlay = document.getElementById("modal-overlay");
+const modalText = document.getElementById("modal-text");
+const cerrarModal = document.getElementById("cerrar-modal");
+
+function mostrarModal(mensaje, accion = null) {
+    modalText.textContent = mensaje;
+    modalOverlay.style.display = "flex";
+    cerrarModal.onclick = () => {
+        modalOverlay.style.display = "none";
+        if (accion) {
+            accion();
+        }
+    };
+}
+
+cerrarModal.addEventListener("click", () => {
+    modalOverlay.style.display = "none";
+});
+
 function cargarreservas() {
     document.querySelectorAll('.bloque-reserva').forEach(b => b.remove());
 
@@ -21,8 +40,9 @@ function confirmarreserva() {
     const usuario = JSON.parse(localStorage.getItem('logueado'));
     
     if (!usuario) {
-        alert("Debes iniciar sesión para reservar");
-        window.location.href = 'registros.html';
+        mostrarModal("Debes iniciar sesión para reservar", () => {
+            window.location.href = 'registros.html';
+        });
         return; 
     }
 
@@ -38,7 +58,7 @@ function confirmarreserva() {
     );
 
     if (superposicion) {
-        alert("Error: Ese horario ya está ocupado");
+        mostrarModal("Error: Ese horario ya está ocupado");
         return;
     }
 
@@ -48,11 +68,12 @@ function confirmarreserva() {
         duracion: duracion,
     };
 
-    reservas.push(nuevaReserva);
-    localStorage.setItem('misreservas', JSON.stringify(reservas));
-
-    alert("Reserva guardada correctamente");
-    cargarreservas();
+    mostrarModal("Reserva guardada correctamente", () => {
+        reservas.push(nuevaReserva);
+        localStorage.setItem('misreservas', JSON.stringify(reservas));
+        cargarreservas();
+    });
+    
 }
 
 window.onload = () => {

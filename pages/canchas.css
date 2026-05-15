@@ -36,7 +36,7 @@
 
 #btn-reserva h2 {
     margin: 0 auto;
-    width: 500px;
+    max-width: 500px;
     padding: 20px;
     background-color: var(--color-secundario);
     border-radius: 15px;
